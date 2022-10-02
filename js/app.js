@@ -1,6 +1,6 @@
 
-function caseUpdateNumber(isIncreasing){
-    const caseInput = document.getElementById('case-number');
+function updateCaseNumber(product, isIncreasing){
+    const caseInput = document.getElementById(product + '-number');
     let caseNumber = caseInput.value;
     if(isIncreasing == true){
         caseNumber = parseInt(caseNumber)  + 1;
@@ -15,15 +15,15 @@ function caseUpdateNumber(isIncreasing){
 }
 // phone increase decrease events
 document.getElementById('phone-plus').addEventListener('click',function(){
-    console.log('phone plus clicked');
+   updateCaseNumber('phone',true);
 })
 
-// handle case increse decrese events
+// handle case increase decrease events
 document.getElementById('case-plus').addEventListener('click', function(){
-    caseUpdateNumber(true);
+    caseUpdateNumber('case', true);
   
 })
 document.getElementById('case-minus').addEventListener('click',function(){
-   caseUpdateNumber(false);
+   caseUpdateNumber('case', false);
     
 })
