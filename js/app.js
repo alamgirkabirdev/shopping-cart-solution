@@ -17,6 +17,9 @@ function updateCaseNumber(product,price, isIncreasing){
 document.getElementById('phone-plus').addEventListener('click',function(){
    updateCaseNumber('phone',1219, true);
 })
+document.getElementById('phone-minus').addEventListener('click',function(){
+    updateCaseNumber('phone', 1219,false);
+})
 
 // handle case increase decrease events
 document.getElementById('case-plus').addEventListener('click', function(){
